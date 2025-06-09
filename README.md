@@ -1,54 +1,75 @@
-# Group Repository for the Data Science Mini-Project (EMATM0050)
+# Protein Interaction Classification 
 
-# Python Environment Setup Guide
+## Problem Statement
+
+Given protein structure data, the objective is to predict whether a pair of residues interact, using deep learning and engineered features (including hydropathy scales).
+
+---
+
+## Repository Structure
+
+- `codes/` – Python scripts for feature generation and model training
+- `dataset/` – Raw and processed data (train/test splits, features, labels)
+- `generated_data/` – Feature files generated for each hydropathy scale
+- `hydropathy/` – Hydropathy scale CSV files
+- `models/` – Saved model files
+- `notebooks/` – Jupyter notebooks for data processing, model training, and analysis
+- `static/` – Output plots and result CSVs
+- `requirements.txt` – Python dependencies
+
+---
+
+## Python Environment Setup Guide
 
 Follow these steps to set up your Python environment for this project.
 
----
+### Prerequisites
 
-## Prerequisites
+- **Python 3.12+** (tested on Python 3.12.7)
 
-- Ensure you have **Python 3.12 +** installed on your system. ( I was running the code on python 3.12.7 )
+### Steps to Set Up the Environment
 
----
-
-## Steps to Set Up the Environment
-
-1. **Create a Virtual Environment**:
+1. **Create a Virtual Environment**  
    ```bash
    python -m venv <env_name>
+   ```
+   Replace `<env_name>` with your preferred environment name.  
+   *Tip: Keep the environment folder out of your Git repository.*
 
-Replace <env_name> with the desired name for your environment.
+2. **Activate the Virtual Environment**  
+   - On macOS/Linux:  
+     ```bash
+     source <env_name>/bin/activate
+     ```
+   - On Windows:  
+     ```bash
+     .\<env_name>\Scripts\activate
+     ```
 
-Note: Keep the environment folder out of your Git repository to avoid committing it.
+3. **Install Dependencies**  
+   ```bash
+   pip install -r requirements.txt
+   ```
+   **Important:** Do not modify the version numbers in `requirements.txt`.
 
-2. **Activate the Virtual Environment**:
-On macOS/Linux:
-  ```bash
-  source <env_name>/bin/activate
-  ```
+4. **Deactivate the Environment**  
+   ```bash
+   deactivate
+   ```
 
-On Windows:
-```bash
-    .\<env_name>\Scripts\activate
-```
+---
 
-Install Dependencies: Use the requirements.txt file to install the necessary packages:
+## How to Use
 
-```bash
-pip install -r requirements.txt
-```
+- Run and explore the Jupyter notebooks in the `notebooks/` directory for data processing, feature engineering, model training, and evaluation.
+- Use scripts in `codes/` for batch processing or model runs.
+- Results and plots are saved in the `static/` directory.
 
-**Important: Do not modify the version numbers in requirements.txt.**
+---
 
-Deactivate the Environment: If you need to deactivate the environment, run:
+## Team
 
-```bash
-deactivate
-```
-
-Group Number: T3
-
-Problem Assigned: Sapienza (F)
-
-Group Members: Shaivya Shankar, Pulkit Dhingra, Luoxi Liu, Shuyi Li
+- Shaivya Shankar
+- Pulkit Dhingra
+- Luoxi Liu
+- Shuyi Li
